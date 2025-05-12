@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">top</a>
+    <a href="career.html">profile
+    <a href="about.html">active</a>
+  </header>
+
+  <main class="content">
+    <h1>将来について</h1>
+<h2>まず現状と理想の自分を図にして比較してみました</h2>
+    <div class="chart-container">
+      <section class="chart-section">
+        <h2>現在</h2>
+        <canvas id="currentChart" width="300" height="300"></canvas>
+        <p class="chart-comment">現状としては創造力とタイムマネジメントに対して苦手意識をもっています</p>
+      </section>
+
+      <div class="arrow">→</div>
+
+      <section class="chart-section">
+        <h2>理想</h2>
+        <canvas id="idealChart" width="300" height="300"></canvas>
+        <p class="chart-comment">苦手な創造力とタイムマネジメントを筆頭に総合力をあげたいです</p>
+      </section>
+    </div>
+
+    <section class="goal-section">
+      <h2>目標</h2>
+      <p class="goal-text">
+        <br>
+        ・なにか物事をやりすすめる際にはあらかじめ何をどれくらいでやればよいかを考え、計画を立てる<br>
+        ・主体的に行動し、様々なことに挑戦する<br>
+        ・自分の意見をしっかり持ち、他者に伝える<br>
+      </p>
+    </section>
+    <section class="future-section">
+      <h2>将来の夢</h2>
+      <p class="future-text">
+        将来の夢はITコンサルタントとして、企業の課題解決に貢献することです。IT業界を志望する理由は、私自身がITの発展によってさまざまな場面で支えられてきた経験があり、その恩恵を今度は自ら提供する側として社会に貢献したいと考えているためです。
+
+
+      </p>
+      <p class="future-text">
+        また、コンサルタント職を志望する理由は、人との対話を通じて信頼関係を築くことにやりがいを感じるとともに、「課題の把握 → 分析 → 解決策の提案」という一連のプロセスが自身の志向や強みと合致しており、力を発揮できると考えたためです。
+
+
+      </p>
+    </section>
+    
+  </main>
+
+  <script>
+    const labels = [
+      "コミュニケーション力",
+      "論理的思考力",
+      "主体性",
+      "タイムマネジメント",
+      "問題解決力",
+      "創造力",
+      
+    ];
+
+    const beforeData = [3, 2, 2, 1, 3, 1];
+    const afterData = [5, 5, 5, 4, 5, 4];
+
+    const createChartConfig = (data, label, color) => ({
+      type: 'radar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: label,
+          data: data,
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: color,
+          borderWidth: 2,
+          pointBackgroundColor: color
+        }]
+      },
+      options: {
+        responsive: false,
+        animation: {
+          duration: 2000,
+          easing: 'easeOutQuart'
+        },
+        scales: {
+          r: {
+            min: 0,
+            max: 5,
+            ticks: {
+              stepSize: 1,
+              backdropColor: 'transparent'
+            },
+            grid: {
+              color: '#ccc'
+            },
+            pointLabels: {
+              font: {
+                size: 12,
+                family: "'Zen Maru Gothic', sans-serif"
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      new Chart(document.getElementById("currentChart"), createChartConfig(beforeData, "現在", "rgba(255,99,132,1)"));
+      new Chart(document.getElementById("idealChart"), createChartConfig(afterData, "理想", "rgba(54,162,235,1)"));
+    });
+  </script>
+</body>
+</html>

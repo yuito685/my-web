@@ -1,0 +1,428 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+
+}
+
+root {
+  font-size: 20px; 
+}
+
+
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  margin-left: 15px;
+}
+body{
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+}
+.background-image{ background-image: url('IMG_4284.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+h1{font-size: large;
+color: black;
+}
+p{font-size: medium;
+  color: black;
+}
+
+
+
+.profile-card {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 60px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.profile-card h1 {
+  text-align: center;
+  letter-spacing: 4px;
+  color: skyblue;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid lightskyblue;
+}
+
+.basic-info p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+
+
+.kihon {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+
+}
+
+.toi {
+  font-weight: bold;
+  color: skyblue;
+  font-size: 1.8rem;
+  display: inline-block;
+  width: 120px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.info-grid span {
+  display: inline-block;
+  background-color: skyblue;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.long-text {
+  font-size: 1.6rem;
+}
+
+.long-text span {
+  display: inline-block;
+  background-color: skyblue;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .profile-card {
+    padding: 20px;
+    margin-top: 120px;
+  }
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .basic-info {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+  text-align: center;
+  overflow-y: scroll; 
+  overflow-x: hidden; 
+}
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-bottom: 2px dashed #ccc;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.chart-section {
+  text-align: center;
+}
+
+.chart-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.chart-comment {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+.arrow {
+  font-size: 3rem;
+  color:#0066cc
+}
+
+.goal-section {
+
+  padding: 30px;
+  margin-top: 60px;
+}
+.goal-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  color: skyblue;
+}
+.goal-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: black;
+}
+.future-section {
+
+  padding: 30px;
+  margin-top: 60px;
+}
+.future-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  color: skyblue;
+}
+.future-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color:black;
+  text-indent: 0;
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+main.content {
+  overflow: auto;
+  padding-top: 100px;
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;       
+  padding: 0 20px;
+}
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+  color: #333;
+}
+
+header {
+  background-color: #4682b4;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.015);
+}
+
+h2 {
+  border-left: 6px solid #4682b4;
+  padding-left: 1rem;
+  color: #2f4f4f;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #4682b4;
+  font-weight: bold;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+}
+/* ベースのフォントと背景設定 */
+body {
+font-family: 'Zen Maru Gothic', sans-serif;
+color: #333;
+background-color: #fefefe;
+line-height: 2;
+margin: 0;
+padding: 0;
+}
+
+
+
+header h1 {
+font-size: 2.4rem;
+margin-bottom: 0.5rem;
+color: #2c3e50;
+}
+
+/* メインコンテンツ全体 */
+main {
+max-width: 760px;
+margin: 3rem auto;
+padding: 0 1.5rem;
+}
+
+/* 記事ごとのセクション */
+article {
+margin-bottom: 4rem;
+}
+
+article h2 {
+font-size: 1.6rem;
+color: #34495e;
+padding-left: 0.75rem;
+margin-bottom: 1rem;
+}
+
+article p {
+margin: 1rem 0;
+font-size: 1.05rem;
+}
+
+/* 太字強調 */
+strong {
+color: #4682b4;
+font-weight: bold;
+}
+
+/* レスポンシブ対応（スマホ向け） */
+@media (max-width: 600px) {
+header h1 {
+  font-size: 1.8rem;
+}
+
+article h2 {
+  font-size: 1.3rem;
+}
+
+article p {
+  font-size: 1rem;
+}
+}
+@media (max-width: 600px) {
+  .content {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .section h2 {
+    font-size: 1.4em;
+  }
+
+  .label {
+    width: 6em;
+  }
+}
